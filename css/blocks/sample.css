@@ -1,0 +1,68 @@
+.sample {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sample__photo {
+  grid-row: span 3;
+  background-image: url("../../assets/photos/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sample__textarea {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  resize: none;
+  height: 100%;
+}
+
+.sample__btn {
+  font-size: 14px;
+  width: 100%;
+  grid-column: 3 / 4;
+  grid-row: 5 / 7;
+}
+
+.sample__input {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--outline-color);
+  border-radius: 4px;
+  padding: 8px 8px;
+}
+
+.sample__input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.sample__fake-checkbox {
+  font-size: 22px;
+}
+
+.sample__checkbox-wrap {
+  grid-column: span 2;
+  cursor: pointer;
+}
+
+.sample__checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.sample__checkbox:focus ~ .sample__fake-checkbox,
+.sample__checkbox:focus ~ .sample__label {
+  color: var(--text-secondary-color);
+}
+
+.sample__checkbox:checked ~ .sample__fake-checkbox,
+.sample__checkbox:checked ~ .sample__label {
+  color: var(--accent-color);
+}
+
+.sample__checkbox:checked:focus ~ .sample__fake-checkbox,
+.sample__checkbox:checked:focus ~ .sample__label {
+  opacity: 0.6;
+}

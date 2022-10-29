@@ -1,0 +1,26 @@
+.btn {
+  display: flex;
+  padding: 10px 0.83em;
+  gap: 10px;
+
+  background: #ffae33;
+  border-radius: 10px;
+  border: none;
+
+  color: var(--text-light-color);
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+button {
+  transition: 0.5s;
+  outline: none;
+}
+
+button:hover {
+  background-color: #fc6d26;
+  transform: scale(1.1);
+}

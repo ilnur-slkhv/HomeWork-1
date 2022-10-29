@@ -1,0 +1,12 @@
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 1s;
+}
+
+.logo:hover {
+  -webkit-text-fill-color: #fc6d26;
+  transform: scale(1.2);
+}

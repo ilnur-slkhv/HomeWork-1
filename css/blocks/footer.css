@@ -1,0 +1,13 @@
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: -0.5px 0.5px 5px 2px var(--bg-secondary-color);
+  background-color: var(--bg-main-color);
+}
+
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

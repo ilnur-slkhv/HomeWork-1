@@ -1,0 +1,16 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__link {
+  color: var(--contacts-color);
+  font-size: 25px;
+  transition: 0.1s;
+}
+
+.contacts__link:hover {
+  transition: 0.2s;
+  transform: scale(1.25);
+}

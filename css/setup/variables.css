@@ -1,0 +1,18 @@
+:root {
+  --bg-main-color: #f8f7f7;
+  --bg-secondary-color: rgba(167, 161, 155, 0.4);
+  --bg-tertiary-color: rgba(255, 255, 255, 0.5);
+  --bg-fourth-color: rgba(255, 255, 255, 1);
+  --bg-overlay-color: rgba(25, 20, 20, 0.8);
+  --text-main-color: #191414;
+  --text-light-color: #f8f7f7;
+  --text-secondary-color: #7b8e98;
+  --outline-color: #cfd8dc;
+  --form-color: #eceff1;
+  --accent-color: #405de6;
+  --primary-color: #ffcc00;
+  --secondary-color: #1db954;
+  --tertiary-color: #ce2724;
+  --fourth-color: #008327;
+  --contacts-color: #ff8a00;
+}

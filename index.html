@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оценка недвижимости</title>
+    <script
+      src="https://kit.fontawesome.com/b315e00b71.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+
+  <body class="sheet">
+    <header class="header">
+      <div class="box header__box">
+        <a href="#" class="logo"
+          ><i class="fa-solid fa-list-check" style="color: #ffae33"></i>Объекты
+          для оценки (задачи)</a
+        >
+
+        <div class="btn__hover">
+          <button class="btn" id="addTask">
+            <i class="fa-sharp fa-solid fa-house"></i
+            ><i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main box">
+      <section class="cards">
+        <h2 class="visually-hidden">Список объектов недвижимости</h2>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="box footer__box">
+        <nav class="contacts">
+          <span class="copyright">Контакты:</span>
+          <a class="git contacts__link" href="https://github.com/ilnur-slkhv"
+            ><i class="fa-brands fa-github socials__icon"></i
+          ></a>
+          <a class="vk contacts__link" href="http://vk.com/yda4ubcem"
+            ><i class="fa-brands fa-vk socials__icon"></i
+          ></a>
+          <a class="tg contacts__link" href="https://t.me/ilnur_salakheev"
+            ><i class="fa-brands fa-telegram socials__icon"></i
+          ></a>
+          <a
+            class="wt contacts__link"
+            href="https://wa.me/message/2PR3UDWODM7SF1"
+            ><i class="fa-brands fa-square-whatsapp"></i
+          ></a>
+        </nav>
+        <span class="copyright">Copyright ©2022 Made by Ilnur Salakheev</span>
+      </div>
+    </footer>
+
+    <div class="arise arise-add-task">
+      <div class="arise__box">
+        <button class="arise__close btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Укажите характеристики объекта оценки</h2>
+        <form class="sample" id="arise-sample-task">
+          <div class="sample__photo"></div>
+          <input
+            type="number"
+            class="sample__input"
+            name="id"
+            placeholder="id"
+            min="1"
+          />
+          <input
+            type="text"
+            class="sample__input"
+            name="variety"
+            required
+            placeholder="Тип объекта"
+          />
+          <input
+            type="text"
+            class="sample__input"
+            name="address"
+            required
+            placeholder="Адрес местонахождения"
+          />
+          <input
+            type="number"
+            class="sample__input"
+            name="square"
+            placeholder="Площадь, кв. м."
+            min="0"
+          />
+          <textarea
+            type="text"
+            class="sample__input sample__textarea"
+            name="description"
+            placeholder="Дополнительная информация"
+          ></textarea>
+          <input
+            type="url"
+            class="sample__input sample__input_photo"
+            name="photo_link"
+            placeholder="Ссылка на фото"
+          />
+          <input
+            type="number"
+            class="sample__input"
+            name="stringency"
+            placeholder="Срочность (укажите цифру от 0 до 10)"
+            min="0"
+            max="10"
+          />
+          <input
+            type="text"
+            class="sample__input sample__purpose"
+            name="purpose"
+            required
+            placeholder="Цель оценки"
+          />
+
+          <label class="sample__checkbox-wrap">
+            <input
+              type="checkbox"
+              name="urgency"
+              class="sample__checkbox"
+              placeholder=""
+            />
+            <span class="sample__label">Поставьте галочку, если срочно</span>
+            <span class="sample__fake-checkbox"
+              ><i class="fa-regular fa-circle-check"></i
+            ></span>
+          </label>
+
+          <label class="sample__checkbox-wrap">
+            <input
+              type="checkbox"
+              name="stage"
+              class="sample__checkbox"
+              placeholder=""
+            />
+            <span class="sample__label"
+              >Поставьте галочку, если задача выполнена</span
+            >
+            <span class="sample__fake-checkbox"
+              ><i class="fa-regular fa-circle-check"></i
+            ></span>
+          </label>
+
+          <button type="submit" class="sample__btn btn">
+            Добавить объект недвижимости
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <template id="card-template">
+      <div class="card">
+        <img src="#" alt="Изображение" class="card__photo" />
+        <a href="#" class="card__link"><h3 class="card__name"></h3></a>
+
+        <button class="card__time" aria-label="Индикатор срочности">
+          <p>Срочно</p>
+          <i
+            class="fa-solid fa-hourglass-start fa-flip"
+            style="--fa-flip-x: 1; --fa-flip-y: 0"
+          ></i>
+        </button>
+
+        <button class="card__completeness" aria-label="Завершенность">
+          <p>Выполнена</p>
+          <i class="fa-solid fa-circle-check"></i>
+        </button>
+      </div>
+    </template>
+
+    <script src="./script/tasks.js" defer></script>
+    <script src="./script/api.js" defer></script>
+    <script src="./script/card.js" defer></script>
+    <script src="./script/arise.js" defer></script>
+    <script src="./script/index.js" defer></script>
+  </body>
+</html>
