@@ -25,6 +25,11 @@
   grid-row: 5 / 7;
 }
 
+.sample__btnlogin {
+  font-size: 14px;
+  width: 100%;
+}
+
 .sample__input {
   outline: none;
   width: 100%;

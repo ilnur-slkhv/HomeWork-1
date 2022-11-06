@@ -2,7 +2,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: -0.5px 0.5px 5px 2px var(--bg-secondary-color);
-  background-color: var(--bg-main-color);
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
 }
 
 .footer__box {

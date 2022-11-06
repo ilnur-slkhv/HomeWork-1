@@ -1,0 +1,121 @@
+.task-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  align-items: center;
+  justify-items: start;
+}
+
+.task-info__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-info__photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  grid-row: 1 / 5;
+}
+.task-info__desc {
+  grid-column: 1 / -1;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.task-info__id {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  gap: 5px;
+  background-color: var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--text-light-color);
+}
+
+.task-info__id:before {
+  content: "id";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.task-info__urgency {
+  border: none;
+  border-color: transparent;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+}
+
+.task-info__urgency_active {
+  color: var(--tertiary-color);
+}
+
+.task-info__stage {
+  border: none;
+  border-color: transparent;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+}
+
+.task-info__stage_active {
+  color: var(--tertiary-color);
+}
+
+.task-info__variety {
+  margin: 0;
+  padding: 5px;
+}
+
+.task-info__stringency {
+  white-space: nowrap;
+}
+
+.task-info__stringency:before {
+  content: "Срочность:";
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.task-info__edited,
+.task-info__saved,
+.task-info__deleted {
+  border-radius: 10px;
+  padding: 6px 10px;
+  display: flex;
+  gap: 5px;
+  border: 1px solid var(--outline-color);
+  align-self: flex-start;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  background-color: var(--bg-main-color);
+}
+
+.task-info__edited,
+.task-info__saved {
+  top: 20px;
+}
+
+.task-info__deleted {
+  top: 60px;
+}
+
+.task-info__edited_hidden {
+  display: none;
+}
+
+.task-info__saved_hidden {
+  display: none;
+}
+.task-info [contentEditable="true"] {
+  box-shadow: 0 0 1px 1px var(--accent-color);
+  outline: none;
+}
+
+.task-info [contentEditable="true"]:focus {
+  box-shadow: 0 0 1px 1px var(--primary-color);
+  outline: none;
+}

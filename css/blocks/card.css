@@ -93,12 +93,12 @@
   backdrop-filter: blur(2px);
   transition: 0.2s linear;
   transition-property: backdrop-filter, background-color;
+  pointer-events: none;
 }
 
 .card:hover {
   transition: 0.2s;
   transform: scale(1.02);
-  box-shadow: -2px 2px 8px 8px rgba(255, 138, 0, 0.4);
 }
 
 .card:hover:before {

@@ -22,7 +22,7 @@
 
 .arise__box {
   max-width: 600px;
-  background-color: var(--form-color);
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
   padding: 20px;
   position: relative;
 }

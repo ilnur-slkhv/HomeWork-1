@@ -5,29 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оценка недвижимости</title>
+
     <script
       src="https://kit.fontawesome.com/b315e00b71.js"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"
+      defer
+    ></script>
+
     <link rel="stylesheet" href="./css/index.css" />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon_io/apple-touch-icon.png"
+      href="/assets/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon_io/favicon-32x32.png"
+      href="/assets/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon_io/favicon-16x16.png"
+      href="/assets/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="manifest" href="/server/site.webmanifest" />
   </head>
 
   <body class="sheet">
@@ -43,6 +52,7 @@
             <i class="fa-sharp fa-solid fa-house"></i
             ><i class="fa-solid fa-plus"></i>
           </button>
+          <button class="btn" id="login">Авторизация</button>
         </div>
       </div>
     </header>
@@ -75,6 +85,31 @@
         <span class="copyright">Copyright ©2022 Made by Ilnur Salakheev</span>
       </div>
     </footer>
+
+    <div class="arise arise-login">
+      <div class="arise__box">
+        <button class="arise__close btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Вход в личный кабинет</h2>
+        <form class="sample" id="arise-sample-login">
+          <input
+            type="email"
+            class="sample__input"
+            name="email"
+            placeholder="Электронная почта"
+          />
+          <input
+            type="password"
+            class="sample__input"
+            name="password"
+            required
+            placeholder="Пароль"
+          />
+          <button type="submit" class="sample__btnlogin btn">Войти</button>
+        </form>
+      </div>
+    </div>
 
     <div class="arise arise-add-task">
       <div class="arise__box">
@@ -175,6 +210,25 @@
       </div>
     </div>
 
+    <div class="arise arise-task-info">
+      <div class="arise__box">
+        <button class="arise__close btn arise__close_external">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="arise__content"></div>
+      </div>
+    </div>
+
+    <!-- В этой части домашнего задания (с классом arise-photo) у меня не появляется картинка при нажати на карточку. Сдаю как есть...( -->
+    <div class="arise arise-photo">
+      <div class="arise__box">
+        <button class="arise__close btn arise__close_external">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="#" class="arise__photo" alt="Изображение" />
+      </div>
+    </div>
+
     <template id="card-template">
       <div class="card">
         <img src="#" alt="Изображение" class="card__photo" />
@@ -195,10 +249,48 @@
       </div>
     </template>
 
-    <script src="./script/tasks.js" defer></script>
-    <script src="./script/api.js" defer></script>
-    <script src="./script/card.js" defer></script>
-    <script src="./script/arise.js" defer></script>
-    <script src="./script/index.js" defer></script>
+    <template id="tasks-info-template">
+      <div class="task-info">
+        <button class="task-info__edited">
+          <i class="fa-regular fa-pen-to-square"></i>Редактировать
+        </button>
+        <button class="task-info__saved task-info__saved_hidden">
+          <i class="fa-regular fa-pen-to-square"></i>Сохранить
+        </button>
+        <button class="task-info__deleted">
+          <i class="fa-solid fa-trash"></i>Удалить
+        </button>
+
+        <img src="#" class="task-info__photo" loading="lazy" />
+        <span class="task-info__id"></span>
+
+        <p class="task-info__purpose"></p>
+
+        <div class="task-info-desc">
+          <h2 class="task-info__variety"></h2>
+          <p class="task-info__address"></p>
+          <span class="task-info__square"></span>
+          <p class="task-info__description"></p>
+        </div>
+
+        <div>
+          <button class="task-info__urgency">
+            <p>Срочно</p>
+            <i
+              class="fa-solid fa-hourglass-start fa-flip"
+              style="--fa-flip-x: 1; --fa-flip-y: 0"
+            ></i>
+          </button>
+          <button class="task-info__stage">
+            <p>Выполнена</p>
+            <i class="fa-solid fa-circle-check"></i>
+          </button>
+        </div>
+
+        <span class="task-info__stringency"></span>
+      </div>
+    </template>
+
+    <script src="./script/index.js" defer type="module"></script>
   </body>
 </html>

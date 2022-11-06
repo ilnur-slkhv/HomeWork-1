@@ -1,4 +1,4 @@
-class Arise {
+export class Arise {
   constructor(className) {
     this._className = className;
     this.arise = document.querySelector(`.${className}`);
